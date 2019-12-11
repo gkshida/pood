@@ -1,5 +1,5 @@
 class KindOfIsATrip
-  attr_reader :bycicles, :customers, :vehicle
+  attr_reader :bicycles, :customers, :vehicle
 
   # Hidden Duck 2:
   # - The same as Case Statement but uses the 'kind_of?' method;
@@ -7,7 +7,7 @@ class KindOfIsATrip
   def prepare(preparers)
     preparers.each do |prepaper|
       if prepaper.kind_of? Mechanic
-        prepaper.prepare_bycicles(bycicles)
+        prepaper.prepare_bicycles(bicycles)
       elsif prepaper.kind_of? TripCoordinator
         prepaper.buy_food(customers)
       elsif prepaper.kind_of? Driver
@@ -19,11 +19,11 @@ class KindOfIsATrip
 end
 
 class Mechanic
-  def prepare_bycicles(bycicles)
-    bycicles.each { |bycicle| prepare_bycicle(bycicle) }
+  def prepare_bicycles(bicycles)
+    bicycles.each { |bicycle| prepare_bicycle(bicycle) }
   end
 
-  def prepare_bycicle(bycicle)
+  def prepare_bicycle(bicycle)
   end
 end
 

@@ -1,5 +1,5 @@
 class DuckTypedTrip
-  attr_reader :bycicles, :customers, :vehicle
+  attr_reader :bicycles, :customers, :vehicle
 
   # Trip expects a 'Preparer' argument, a Duck that responds to 'prepare_trip'.
   # This 'Preparer' is an abstract class, an idea.
@@ -15,10 +15,10 @@ end
 # should just implement 'prepare_trip'.
 class Mechanic
   def prepare_trip(trip)
-    trip.bycicles.each { |bycicle| prepare_bycicle(bycicle) }
+    trip.bicycles.each { |bicycle| prepare_bicycle(bicycle) }
   end
 
-  def prepare_bycicle(bycicle)
+  def prepare_bicycle(bicycle)
   end
 end
 

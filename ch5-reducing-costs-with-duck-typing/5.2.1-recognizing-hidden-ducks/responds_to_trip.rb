@@ -1,13 +1,13 @@
 class RespondsToTrip
-  attr_reader :bycicles, :customers, :vehicle
+  attr_reader :bicycles, :customers, :vehicle
 
   # Hidden Duck 3:
   # - Here we use the 'responds_to?' method;
   # - The dependencies are reduced but THEY ARE HIDDEN.
   def prepare(preparers)
     preparers.each do |prepaper|
-      if prepaper.responds_to?(:prepare_bycicles)
-        prepaper.prepare_bycicles(bycicles)
+      if prepaper.responds_to?(:prepare_bicycles)
+        prepaper.prepare_bicycles(bicycles)
       elsif prepaper.responds_to?(:buy_food)
         prepaper.buy_food(customers)
       elsif prepaper.responds_to?(:gas_up)
@@ -19,11 +19,11 @@ class RespondsToTrip
 end
 
 class Mechanic
-  def prepare_bycicles(bycicles)
-    bycicles.each { |bycicle| prepare_bycicle(bycicle) }
+  def prepare_bicycles(bicycles)
+    bicycles.each { |bicycle| prepare_bicycle(bicycle) }
   end
 
-  def prepare_bycicle(bycicle)
+  def prepare_bicycle(bicycle)
   end
 end
 

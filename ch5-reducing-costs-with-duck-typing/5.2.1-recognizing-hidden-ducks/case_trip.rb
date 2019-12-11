@@ -1,5 +1,5 @@
 class CaseTrip
-  attr_reader :bycicles, :customers, :vehicle
+  attr_reader :bicycles, :customers, :vehicle
 
   # Hidden Duck 1:
   # - All the prepares must share something in common;
@@ -9,7 +9,7 @@ class CaseTrip
     preparers.each do |prepaper|
       case prepaper
       when Mechanic
-        prepaper.prepare_bycicles(bycicles)
+        prepaper.prepare_bicycles(bicycles)
       when TripCoordinator
         prepaper.buy_food(customers)
       when Driver
@@ -21,11 +21,11 @@ class CaseTrip
 end
 
 class Mechanic
-  def prepare_bycicles(bycicles)
-    bycicles.each { |bycicle| prepare_bycicle(bycicle) }
+  def prepare_bicycles(bicycles)
+    bicycles.each { |bicycle| prepare_bicycle(bicycle) }
   end
 
-  def prepare_bycicle(bycicle)
+  def prepare_bicycle(bicycle)
   end
 end
 

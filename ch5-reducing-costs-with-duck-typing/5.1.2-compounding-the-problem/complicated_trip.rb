@@ -1,5 +1,5 @@
 class ComplicatedTrip
-  attr_reader :bycicles, :customers, :vehicle
+  attr_reader :bicycles, :customers, :vehicle
 
   # With the addition of new requirements, this class starts to look bad:
   # - 1: It knows the name of three classes: Mechanic, TripCoordinator and
@@ -10,7 +10,7 @@ class ComplicatedTrip
     preparers.each do |prepaper|
       case prepaper
       when Mechanic
-        prepaper.prepare_bycicles(bycicles)
+        prepaper.prepare_bicycles(bicycles)
       when TripCoordinator
         prepaper.buy_food(customers)
       when Driver
@@ -22,11 +22,11 @@ class ComplicatedTrip
 end
 
 class Mechanic
-  def prepare_bycicles(bycicles)
-    bycicles.each { |bycicle| prepare_bycicle(bycicle) }
+  def prepare_bicycles(bicycles)
+    bicycles.each { |bicycle| prepare_bicycle(bicycle) }
   end
 
-  def prepare_bycicle(bycicle)
+  def prepare_bicycle(bicycle)
   end
 end
 
